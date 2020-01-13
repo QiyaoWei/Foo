@@ -1,0 +1,11 @@
+NAS is not new. However, traditional hyperparam optimizations are mostly limited to fixed-length search, and other methods
+(eg evolutionary methods) are too slow
+
+Original NAS: Use REINFORCE to train an RNN to generate the desired CNN architecture
+
+NASNet: Efficient because only train to identify two kinds of cells, and then stack them
+ENAS: Efficient because weight-sharing when generating a new child & not training fully on all children models
+Q: What are the "generated child models"?
+
+DARTS: Efficient because gradient based on a continuous DAG as search space
+ProxylessNAS: New direction in path-pruning, proved to not be reliable
