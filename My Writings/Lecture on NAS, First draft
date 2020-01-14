@@ -3,9 +3,12 @@ NAS is not new. However, traditional hyperparam optimizations are mostly limited
 
 Original NAS: Use REINFORCE to train an RNN to generate the desired CNN architecture
 
+EAS: Efficient because end-to-end RL training
 NASNet: Efficient because only train to identify two kinds of cells, and then stack them
-ENAS: Efficient because weight-sharing when generating a new child & not training fully on all children models
-Q: What are the "generated child models"?
-
+ENAS: Efficient because weight-sharing when generating a new child & mini-training on children models
 DARTS: Efficient because gradient based on a continuous DAG as search space
-ProxylessNAS: New direction in path-pruning, proved to not be reliable
+ProxylessNAS: New direction in path-pruning, proved to not be reliable (at least not as reliable as stacking)
+
+
+Some key improvements/questions:
+1. Why does stacking work so well?
