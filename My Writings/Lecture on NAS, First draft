@@ -12,3 +12,50 @@ ProxylessNAS: New direction in path-pruning, proved to not be reliable (at least
 
 Some key improvements/questions:
 1. Why does stacking work so well?
+
+
+Questions about original NAS implementation:
+1. How does REINFORCE generate a(1:T)?
+  -All relevant sources---https://www.automl.org/automl/literature-on-neural-architecture-search/
+  -Original NAS lecture---http://rll.berkeley.edu/deeprlcoursesp17/docs/quoc_barret.pdf
+  -Implementation # one---https://github.com/titu1994/neural-architecture-search
+  -Implementation # two---https://github.com/ydzhang12345/Neural-Architecture-Search
+  -Implementation # thr---https://github.com/dhruvramani/Neural-Architecture-Search-with-RL
+  -Implementation # fou---https://github.com/D-X-Y/Awesome-NAS
+  -Official ENAS Implem---https://github.com/melodyguan/enas
+  -Official OrigNAScell---https://github.com/tensorflow/tensorflow/blob/r1.4/tensorflow/contrib/rnn/python/ops/rnn_cell.py#L1363
+
+
+Excerpts:
+
+PNAS:
+Prob inspiration from max-pooling layer.
+The best-performing cells are allowed to expand and contain more basic (building) blocks. Is stacking g/b though?
+
+ENAS: Same question as above
+"
+Another contribution of ENAS consists of sampling mini-batches from validation dataset to train designed models.
+The models with the best accuracy are then trained on the entire validation dataset.
+Additionally, the approach efficiency is greatly improved by implementing a weight sharing strategy.
+Each node has its own parameters (used when involved operations are activated) that are
+shared through inheritance by the generated child models.
+The latter are hence not trained from scratch saving a considerable processing time.
+ENAS provides competitive results on CIFAR-10 and Penn Treebank datasets.
+It specifically takes much less time to build the convolution cells than
+previous approaches that adopt the same strategy of designing modular structures then stack them to obtain a final CNN.
+"
+
+NASNet: Transfer from CIFAR-10 proxy training to ImageNet.
+It is alarming how random search gives only slightly worse behavior than RL in the controller.
+This means that the search space for CNNs are just so limited. Also again stacking
+
+DARTS: Search continuously with gradients.
+
+"NAS Evaluation is Frustratingly Hard":
+"
+we will show that:
+(a) how you train your model has a much bigger impact than the actual architecture chosen;
+(b) different architectures from the same search space perform very similarly, so much so that
+(c) hyperparameters, like the number of cells, or the seed itself have a very significant effect on the ranking; and
+(d) the specific operations themselves have less impact on the final accuracy than the hand-designed macro-structure of the network
+"
