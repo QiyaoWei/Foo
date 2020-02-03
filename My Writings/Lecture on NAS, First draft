@@ -16,12 +16,12 @@ Some key improvements/questions:
 
 Questions about original NAS implementation:
 1. How does REINFORCE generate a(1:T)?
-  -All relevant sources---https://www.automl.org/automl/literature-on-neural-architecture-search/
+  -Relevant sources one---https://www.automl.org/automl/literature-on-neural-architecture-search/
+  -Relevant sources two---https://github.com/D-X-Y/Awesome-NAS
   -Original NAS lecture---http://rll.berkeley.edu/deeprlcoursesp17/docs/quoc_barret.pdf
   -Implementation # one---https://github.com/titu1994/neural-architecture-search
   -Implementation # two---https://github.com/ydzhang12345/Neural-Architecture-Search
   -Implementation # thr---https://github.com/dhruvramani/Neural-Architecture-Search-with-RL
-  -Implementation # fou---https://github.com/D-X-Y/Awesome-NAS
   -Official ENAS Implem---https://github.com/melodyguan/enas
   -Official OrigNAScell---https://github.com/tensorflow/tensorflow/blob/r1.4/tensorflow/contrib/rnn/python/ops/rnn_cell.py#L1363
 
