@@ -13,3 +13,6 @@ Probability Theory---The Logic of Science:
 "Perhaps we have here the reason why science and mathematics are the most successful of human activities;
 they deal with propositions which produce the simplest of all mental states.
 Such states would be the ones least perturbed by a given amount of imperfection in the human mind."
+
+Yann LeCun:
+"Replace symbols with vectors, logic by continuous function, because we want to make reasoning compatible with gradient based learning"
